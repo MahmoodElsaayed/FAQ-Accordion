@@ -77,14 +77,14 @@ body {
     font: 600 2rem var(--primary-fonts);
     background-color: transparent;
     color: var(--Dark-purple);
-    padding-right: 40px;
+    padding-right: 50px;
 }
 
 .question button.accordion::after {
     content: "+";
     position: absolute;
     right: 0px;
-    top: -5px;
+    top: -2px;
     font: 400 2.5rem var(--primary-fonts);
     vertical-align: 10px;
     color: var(--White);
@@ -112,6 +112,14 @@ body {
     transition: ease-in-out .3s;
     font-size: 1.7rem;
     color: var(--Grayish-purple);
+}
+
+@media screen and (max-width: 50em) {
+    .FAQ-container {
+        font-size: 1.4rem;
+        width: auto;
+        margin: 0 10px;
+    }
 }
 /* * * * * * */
 
