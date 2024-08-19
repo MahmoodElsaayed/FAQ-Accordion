@@ -18,6 +18,7 @@
     --Light-pink: hsl(275, 100%, 97%);
     --Grayish-purple: hsl(292, 16%, 49%);
     --Dark-purple: hsl(292, 42%, 14%);
+    --bright-purple: hsl(281, 83%, 54%);
 }
 
 html {
@@ -29,6 +30,11 @@ body {
     width: 100%;
     font: normal 1.6rem var(--primary-fonts);
     background-color: var(--Light-pink);
+
+    display: grid;
+    grid-template-rows: 1fr 50px;
+    justify-items: center;
+    align-items: center;
 }
 
 .bg-img {
@@ -40,3 +46,63 @@ body {
     height: 320px;
     background: url(./assets/images/background-pattern-desktop.svg) no-repeat center center / cover;
 }
+
+/* FAQ Component Styles */
+.FAQ-container {
+    width: 800px;
+    padding: 45px;
+    border-radius: 30px;
+    background-color: var(--White);
+}
+
+.FAQ-container>div~div {
+    margin-top: 50px;
+}
+
+.FAQ-container .header {
+    font-size: 2.5rem;
+    display: flex;
+    gap: 25px;
+    margin-bottom: 50px;
+}
+
+.question button.accordion {
+    position: relative;
+    width: 100%;
+    border: none;
+    text-align: left;
+    font: 600 2rem var(--primary-fonts);
+    background-color: transparent;
+    color: var(--Dark-purple);
+}
+
+.question button.accordion::after {
+    content: "+";
+    position: absolute;
+    right: 0px;
+    top: -5px;
+    font: 400 2.5rem var(--primary-fonts);
+    vertical-align: 10px;
+    color: var(--White);
+    display: inline-block;
+    text-align: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
+    background-color: var(--bright-purple);
+}
+
+.question button.accordion.active::after {
+    content: "-";
+    background-color: var(--Dark-purple);
+}
+
+.question button.accordion:hover {
+    color: var(--bright-purple);
+}
+
+.question .panel {
+    font-size: 1.7rem;
+    color: var(--Grayish-purple);
+}
+/* * * * * * */
