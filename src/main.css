@@ -66,14 +66,18 @@ body {
     margin-bottom: 50px;
 }
 
-.question button.accordion {
+.question {
     position: relative;
+}
+
+.question button.accordion {
     width: 100%;
     border: none;
     text-align: left;
     font: 600 2rem var(--primary-fonts);
     background-color: transparent;
     color: var(--Dark-purple);
+    padding-right: 40px;
 }
 
 .question button.accordion::after {
